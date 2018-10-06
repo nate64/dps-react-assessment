@@ -1,14 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { getBeers } from '../reducers/beers'
-import NoMatch from './NoMatch';
-import NavBar from './NavBar';
-import Flash from './Flash';
-import Home from './Home';
 import { Segment, Card, Container } from 'semantic-ui-react';
 
 class Beers extends React {
-  state = { getBeers: [] } 
+  state = { getBeers: '' } 
 
   componentDidMount(){
     const { dispatch } = this.props
@@ -33,18 +29,10 @@ class Beers extends React {
   }
 
   const mapStateToProps = (state) => {
-    return {
-      beers: state.beers
-    }
+    return { beers: state.beers }
   }
 
 
 
 }
 export default connect(mapStateToProps)(Beers);
-
-
-
-
-
-///api/all_beers - Returns the first 50 Beers from the BreweryDB API
