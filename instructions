@@ -1,0 +1,4 @@
+Add a new client side route - /beers that renders our new Beers Component. 
+  Our routes are defined in client/src/components/App.js.
+Use axios, fetch or any other HTTP Request library to GET the first 50 Beers from /api/all_beers. 
+Use axios, fetch or any other HTTP Request library to GET the first 50 Breweries from /api/all_breweries. 
