@@ -5,38 +5,45 @@ import NoMatch from './NoMatch';
 import NavBar from './NavBar';
 import Flash from './Flash';
 import Home from './Home';
-import { Segment } from 'semantic-ui-react';
+import { Segment, Card, Container } from 'semantic-ui-react';
 
 class Beers extends React {
+  state = { getBeers: [] } 
 
   componentDidMount(){
     const { dispatch } = this.props
-    dispatch(getDestinations())
+    dispatch(getBeers())
+  }
+
+  displayBeers = () => {
+    return this.props.beers.map( b => 
+      <Card key={b.id} href={`/beers/${b.id}`}>
+      </Card>
+    )
+  }
+
+  render(){
+    return(
+      <Container >
+        <Card.Group centered itemsPerRow={3}>
+            {this.displayBeers()}
+        </Card.Group>
+      </Container>
+    ) 
+  }
+
+  const mapStateToProps = (state) => {
+    return {
+      beers: state.beers
+    }
   }
 
 
 
-    dispatch(getBeers(){
-  }
-
-
-  
-
-  display50Beers(){
-
-  }
-
-
-
-
-  render() {
-    return null
-
-  }
 }
+export default connect(mapStateToProps)(Beers);
 
 
-export default Beers;
 
 
 
