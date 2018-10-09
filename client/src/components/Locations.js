@@ -24,17 +24,17 @@ class Locations extends React.Component {
     )
   }
 
-render() {
-  return(
-    <div>
-      <Container>
-        <Card.Group itemsPerRow = {3}>
-          {this.displayLocations()}
-        </Card.Group>
-      </Container>
-    </div>
-  ) 
-}
+  render() {
+    return(
+      <div>
+        <Container>
+          <Card.Group itemsPerRow = {3}>
+            {this.displayLocations()}
+          </Card.Group>
+        </Container>
+      </div>
+    ) 
+  }
 
 
 
