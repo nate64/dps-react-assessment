@@ -7,7 +7,8 @@ class Beers extends React.Component {
 
   componentDidMount(){
     axios.get('/api/all_beers')
-      .then( res => this.setState({ getBeers: res.data.entries }) )
+      .then( res => this.setState({ getBeers: res.data.entries }) 
+      )
   }
 
   displayBeers = () => {
@@ -34,10 +35,5 @@ class Beers extends React.Component {
       </div>
     ) 
   }
-
-  
-
-
 }
-
 export default Beers

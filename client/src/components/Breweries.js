@@ -11,15 +11,17 @@ componentDidMount(){
       )
     }
 
-getBreweries = () => {
+displayBreweries = () => {
   return this.state.getBreweries.map( b => {
     return ( 
       <Card key={b.id} >
         {b.name}
         {b.website}
+        {b.established}
       </Card>
       )
-  }) 
+    }
+  ) 
 }
 
 render(){
@@ -27,14 +29,11 @@ render(){
     <div>
       <Container>
         <Card.Group itemsPerRow={3}>
-          {this.getBreweries()}
+          {this.displayBreweries()}
         </Card.Group>
       </Container>
     </div>
-  )
-}
-
-
-
+    ) 
+  }
 }
 export default Breweries
