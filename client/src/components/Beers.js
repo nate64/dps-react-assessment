@@ -6,7 +6,7 @@ class Beers extends React.Component {
   state = { getBeers: [] } 
 
   componentDidMount(){
-    axios.get('/api/all_beers')
+    axios.get('/api/all_beers?page=20&per_page=5')
       .then( res => this.setState({ getBeers: res.data.entries }) 
       )
   }

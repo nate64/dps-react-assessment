@@ -22,12 +22,11 @@ class Glassware extends React.Component {
     )    
   }
 
-
   render() {
     return(
       <div>
         <Container>
-          <Card.Group itemsPerRow = {6}>
+          <Card.Group itemsPerRow = {4}>
             {this.displayGlassware()}
           </Card.Group>
         </Container>
